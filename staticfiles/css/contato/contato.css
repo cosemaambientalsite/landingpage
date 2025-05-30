@@ -1,0 +1,137 @@
+.contact-sidebar {
+    position: fixed;
+    top: 0;
+    right: -400px;
+    width: 400px;
+    height: 100%;
+    background-color: #63783D;
+    box-shadow: -2px 0 5px rgba(0,0,0,0.3);
+    padding: 30px 20px;
+    transition: right 0.3s ease;
+    z-index: 999;
+    color: white;
+    font-family: 'Arial', sans-serif;
+}
+
+.contact-sidebar.active {
+    right: 0;
+}
+
+.contact-sidebar h3 {
+    margin-top: 0;
+    font-weight: bold;
+    color: white;
+}
+
+.contact-sidebar .descricao {
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.contact-sidebar label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+    color: white;
+}
+
+.contact-sidebar input,
+.contact-sidebar select,
+.contact-sidebar textarea {
+    width: 100%;
+    padding: 10px 20px;
+    margin-top: 5px;
+    border: 1px solid white;
+    border-radius: 50px;
+    background-color: transparent;
+    color: white;
+}
+.contact-sidebar textarea {
+    resize: vertical;
+    min-height: 100px;
+    border-radius: 30px;
+}
+
+.contact-sidebar input::placeholder,
+.contact-sidebar textarea::placeholder {
+    color: #e0e0e0;
+}
+
+.contact-sidebar textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.contact-sidebar button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    margin-top: 20px;
+    background-color: white;
+    color: #63783D;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.contact-sidebar button[type="submit"]:hover {
+    background-color: #f0f0f0;
+}
+.contact-sidebar select {
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+    border-radius: 50px;
+    padding: 10px 20px;
+    font-size: 16px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.contact-sidebar select option {
+    background-color: #63783D;
+    color: white;
+}
+
+
+.close-button {
+    background: none;
+    border: none;
+    font-size: 30px;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    cursor: pointer;
+    color: white;
+}
+/* Estilo base dos ícones */
+.social-icon i {
+    font-size: 24px;
+    transition: transform 0.4s, color 0.4s;
+    display: inline-block;
+}
+
+/* Facebook */
+.facebook-icon:hover i {
+    transform: rotateY(180deg);
+    color: #3b5998; /* Azul Facebook */
+}
+
+/* Instagram */
+.instagram-icon:hover i {
+    transform: rotateY(180deg);
+    color: #E1306C; /* Rosa Instagram */
+}
+
+/* Botão de contato: hover alterna para ícone de carta aberta e cor vermelha */
+.contact-icon i {
+    transition: color 0.4s, transform 0.4s;
+}
+
+.contact-icon:hover i {
+    color: #d9534f;
+    transform: rotateY(180deg);
+}
+
+

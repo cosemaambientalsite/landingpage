@@ -1,0 +1,95 @@
+.bg-home {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.bg-video {
+    position: fixed;
+    top: 0; left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+    object-fit: cover;
+}
+.cover-content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    color: white;
+    padding-top: 20vh;
+}
+.slogan-inter {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    color: white;
+    margin-top: 20px;
+    line-height: 1.6;
+}
+
+.slogan-inter p:first-child {
+    font-family: 'Inter', sans-serif !important;
+    font-weight: 700 !important;
+    font-size: 28px !important;  /* Ajuste conforme necessário */
+    color: white !important;
+    margin: 0;
+    line-height: 1.4;
+    text-align: center;
+}
+
+.slogan-inter p:last-child {
+    font-size: 18px;
+    font-weight: 500;
+    margin-top: 40px;  /* aumenta a distância do texto anterior */
+    opacity: 0.9;
+}
+
+.btn-semeando {
+    background-color: #ccff00;  /* verde limão */
+    color: black;
+    border: none;
+    border-radius: 30px;
+    padding: 10px 20px;
+    font-weight: bold;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    margin-top: 50px; 
+}
+
+.btn-semeando:hover {
+    background-color: #b3e600;
+}
+
+.btn-semeando .icon-left {
+    height: 24px;
+    width: auto;
+}
+
+.footer {
+    text-align: center !important;
+    color: #cccccc !important;
+}
+
+.footer i,
+.footer .bi {
+    color: #28a745 !important; /* Verde limão */
+    font-size: 20px;
+    vertical-align: middle;
+}
+.full-width-img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}

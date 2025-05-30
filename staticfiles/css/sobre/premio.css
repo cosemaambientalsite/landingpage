@@ -1,0 +1,76 @@
+/* Cartão de prêmio */
+.premio-card {
+    border: 2px solid #28a745;
+    background-color: #f5f5f5;
+    border-radius: 80px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    margin-top: 80px;
+}
+
+.premio-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.premio-img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+}
+
+/* Espaçamento geral da seção */
+.premios-section {
+    padding-top: 360px;
+    margin-top: 100px;
+}
+
+/* Barra com brilho atrás do título */
+.barra-brilho {
+    position: relative;
+    width: 100vw;
+    background-color: #e9f5e3;
+    padding: 30px 0;
+    overflow: hidden;
+    margin-bottom: 2rem;
+    z-index: 0;
+}
+
+.barra-brilho::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 200%;
+    height: 100%;
+    background: linear-gradient(
+        120deg,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.4) 50%,
+        rgba(255, 255, 255, 0) 100%
+    );
+    transform: skewX(-20deg);
+    animation: brilho-movimento 3s infinite linear;
+    z-index: 1;
+    pointer-events: none;
+}
+
+@keyframes brilho-movimento {
+    0% {
+        left: -100%;
+    }
+    100% {
+        left: 100%;
+    }
+}
+
+/* Título da seção */
+.titulo-premios {
+    position: relative;
+    z-index: 2;
+    font-size: 2rem;
+    color: #1e392a;
+    font-weight: bold;
+    text-align: center;
+}

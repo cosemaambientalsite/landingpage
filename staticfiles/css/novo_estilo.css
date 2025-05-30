@@ -1,0 +1,944 @@
+/* Estilos para o novo navbar */
+.navbar-cosema {
+    background-color: rgba(0, 0, 0, 0.7);
+    transition: all 0.3s ease;
+    padding: 15px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar-cosema.scrolled {
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 10px 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-cosema .navbar-brand img {
+    height: 50px;
+    transition: all 0.3s ease;
+}
+
+.navbar-cosema.scrolled .navbar-brand img {
+    height: 40px;
+}
+
+.navbar-cosema .nav-link {
+    color: #fff;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.navbar-cosema .nav-link:hover {
+    color: #8BC34A;
+}
+
+.navbar-cosema .nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #8BC34A;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: width 0.3s ease;
+}
+
+.navbar-cosema .nav-link:hover::after {
+    width: 70%;
+}
+
+.navbar-cosema .nav-link.active {
+    color: #8BC34A;
+}
+
+.navbar-cosema .nav-link.active::after {
+    width: 70%;
+}
+
+.navbar-cosema .dropdown-menu {
+    background-color: rgba(0, 0, 0, 0.9);
+    border: none;
+    border-radius: 0.5rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    padding: 1rem;
+    margin-top: 10px;
+}
+
+.navbar-cosema .dropdown-item {
+    color: #fff;
+    padding: 0.5rem 1rem;
+    transition: all 0.3s ease;
+    border-radius: 0.25rem;
+}
+
+.navbar-cosema .dropdown-item:hover {
+    background-color: rgba(139, 195, 74, 0.2);
+    color: #8BC34A;
+}
+
+.navbar-cosema .dropdown-item img {
+    width: 20px;
+    margin-right: 10px;
+}
+
+.navbar-cosema .social-icon {
+    color: #fff;
+    font-size: 1.2rem;
+    margin-left: 10px;
+    transition: all 0.3s ease;
+}
+
+/* Estilo base dos ícones */
+.social-icon i {
+    font-size: 24px;
+    transition: transform 0.4s, color 0.4s;
+    display: inline-block;
+}
+
+/* Facebook */
+.facebook-icon:hover i {
+    transform: rotateY(180deg);
+    color: #3b5998; /* Azul Facebook */
+}
+
+/* Instagram */
+.instagram-icon:hover i {
+    transform: rotateY(180deg);
+    color: #E1306C; /* Rosa Instagram */
+}
+
+/* Botão de contato: hover alterna para ícone de carta aberta e cor vermelha */
+.contact-icon i {
+    transition: color 0.4s, transform 0.4s;
+}
+
+.contact-icon:hover i {
+    color: #d9534f;
+    transform: rotateY(180deg);
+}
+
+.navbar-cosema .btn-contato {
+    background-color: #8BC34A;
+    color: #fff;
+    border-radius: 50px;
+    padding: 0.5rem 1.5rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: 2px solid #8BC34A;
+}
+
+.navbar-cosema .btn-contato:hover {
+    background-color: transparent;
+    color: #8BC34A;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(139, 195, 74, 0.3);
+}
+
+/* Estilos para o navbar mobile */
+@media (max-width: 991.98px) {
+    .navbar-cosema .navbar-collapse {
+        background-color: rgba(0, 0, 0, 0.95);
+        padding: 1rem;
+        border-radius: 0.5rem;
+        margin-top: 10px;
+    }
+    
+    .navbar-cosema .navbar-toggler {
+        border: none;
+        padding: 0;
+    }
+    
+    .navbar-cosema .navbar-toggler:focus {
+        box-shadow: none;
+    }
+    
+    .navbar-cosema .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    }
+    
+    .navbar-cosema .nav-link::after {
+        display: none;
+    }
+    
+    .navbar-cosema .dropdown-menu {
+        background-color: rgba(0, 0, 0, 0.5);
+        margin-top: 0;
+    }
+    
+    .navbar-cosema .social-icons-mobile {
+        display: flex;
+        justify-content: center;
+        margin-top: 1rem;
+        padding-top: 1rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .navbar-cosema .social-icons-mobile .social-icon {
+        margin: 0 10px;
+    }
+}
+
+/* Estilos para o hero section */
+.hero-section {
+    position: relative;
+    height: 100vh;
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.hero-section .bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+}
+
+.hero-section .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8));
+    z-index: -1;
+}
+
+.hero-section .content {
+    text-align: center;
+    color: #fff;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.hero-section .logo {
+    margin-bottom: 2rem;
+    animation: fadeInDown 1.5s ease;
+}
+
+.hero-section .slogan {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    animation: fadeInUp 1.5s ease 0.5s both;
+}
+
+.hero-section .sub-slogan {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    animation: fadeInUp 1.5s ease 0.8s both;
+}
+
+.hero-section .btn-saiba-mais {
+    display: inline-flex;
+    align-items: center;
+    background-color: #8BC34A;
+    color: #fff;
+    border-radius: 50px;
+    padding: 0.8rem 2rem;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    border: 2px solid #8BC34A;
+    animation: fadeInUp 1.5s ease 1.1s both;
+    text-decoration: none;
+}
+
+.hero-section .btn-saiba-mais:hover {
+    background-color: transparent;
+    color: #8BC34A;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(139, 195, 74, 0.3);
+}
+
+.hero-section .btn-saiba-mais img {
+    height: 24px;
+    margin-right: 10px;
+    transition: all 0.3s ease;
+}
+
+.hero-section .btn-saiba-mais:hover img {
+    transform: rotate(15deg);
+}
+
+.hero-section .scroll-indicator {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: bounce 2s infinite;
+    color: #fff;
+    font-size: 2rem;
+    cursor: pointer;
+    z-index: 1;
+}
+
+/* Animações */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0) translateX(-50%);
+    }
+    40% {
+        transform: translateY(-20px) translateX(-50%);
+    }
+    60% {
+        transform: translateY(-10px) translateX(-50%);
+    }
+}
+
+/* Estilos para a seção de estatísticas */
+.stats-section {
+    padding: 5rem 0;
+    background-color: #f9f9f9;
+    position: relative;
+    overflow: hidden;
+}
+
+.stats-section .bg-shape {
+    position: absolute;
+    top: -100px;
+    right: -100px;
+    width: 500px;
+    height: 500px;
+    background-color: rgba(139, 195, 74, 0.1);
+    border-radius: 50%;
+    z-index: 0;
+}
+
+.stats-section .bg-shape-2 {
+    position: absolute;
+    bottom: -150px;
+    left: -150px;
+    width: 400px;
+    height: 400px;
+    background-color: rgba(139, 195, 74, 0.05);
+    border-radius: 50%;
+    z-index: 0;
+}
+
+.stats-section .container {
+    position: relative;
+    z-index: 1;
+}
+
+.stats-section .section-title {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.stats-section .section-title h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 1rem;
+    position: relative;
+    display: inline-block;
+}
+
+.stats-section .section-title h2::after {
+    content: '';
+    position: absolute;
+    width: 80px;
+    height: 3px;
+    background-color: #8BC34A;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.stats-section .section-title p {
+    font-size: 1.2rem;
+    color: #666;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.stats-section .stat-card {
+    background-color: #fff;
+    border-radius: 1rem;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.stats-section .stat-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+.stats-section .stat-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background-color: #8BC34A;
+}
+
+.stats-section .stat-card .icon {
+    font-size: 3rem;
+    color: #8BC34A;
+    margin-bottom: 1.5rem;
+}
+
+.stats-section .stat-card .counter {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.stats-section .stat-card h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.stats-section .stat-card p {
+    color: #888;
+    margin-bottom: 0;
+}
+
+/* Estilos para a seção de serviços */
+.services-section {
+    padding: 5rem 0;
+    background-color: #fff;
+    position: relative;
+}
+
+.services-section .section-title {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.services-section .section-title h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 1rem;
+    position: relative;
+    display: inline-block;
+}
+
+.services-section .section-title h2::after {
+    content: '';
+    position: absolute;
+    width: 80px;
+    height: 3px;
+    background-color: #8BC34A;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.services-section .section-title p {
+    font-size: 1.2rem;
+    color: #666;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.services-section .service-card {
+    background-color: #fff;
+    border-radius: 1rem;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.services-section .service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+    border-color: rgba(139, 195, 74, 0.3);
+}
+
+.services-section .service-card .icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.services-section .service-card:hover .icon {
+    transform: scale(1.1);
+}
+
+.services-section .service-card h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.services-section .service-card p {
+    color: #666;
+    margin-bottom: 1.5rem;
+}
+
+.services-section .service-card .btn-saiba-mais {
+    display: inline-block;
+    color: #8BC34A;
+    font-weight: 600;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.services-section .service-card .btn-saiba-mais::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #8BC34A;
+    bottom: -5px;
+    left: 0;
+    transition: width 0.3s ease;
+}
+
+.services-section .service-card .btn-saiba-mais:hover::after {
+    width: 100%;
+}
+
+/* Estilos para o footer */
+.footer {
+    background-color: #222;
+    color: #fff;
+    padding: 5rem 0 0;
+    position: relative;
+}
+
+.footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 10px;
+    background: linear-gradient(90deg, #8BC34A, #4CAF50);
+}
+
+.footer .footer-logo {
+    margin-bottom: 1.5rem;
+}
+
+.footer .footer-logo img {
+    height: 60px;
+}
+
+.footer h4 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.footer h4::after {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 2px;
+    background-color: #8BC34A;
+    bottom: 0;
+    left: 0;
+}
+
+.footer p {
+    color: #aaa;
+    margin-bottom: 1.5rem;
+}
+
+.footer .contact-info {
+    margin-bottom: 2rem;
+}
+
+.footer .contact-info li {
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: flex-start;
+}
+
+.footer .contact-info li i {
+    color: #8BC34A;
+    font-size: 1.2rem;
+    margin-right: 10px;
+    margin-top: 5px;
+}
+
+.footer .social-links {
+    display: flex;
+    margin-bottom: 2rem;
+}
+
+.footer .social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    margin-right: 10px;
+    color: #fff;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+}
+
+.footer .social-links a:hover {
+    background-color: #8BC34A;
+    transform: translateY(-5px);
+}
+
+.footer .footer-links li {
+    margin-bottom: 10px;
+}
+
+.footer .footer-links a {
+    color: #aaa;
+    transition: all 0.3s ease;
+    position: relative;
+    padding-left: 15px;
+}
+
+.footer .footer-links a::before {
+    content: '\f105';
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    position: absolute;
+    left: 0;
+    color: #8BC34A;
+}
+
+.footer .footer-links a:hover {
+    color: #8BC34A;
+    padding-left: 20px;
+}
+
+.footer .newsletter-form {
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.footer .newsletter-form input {
+    width: 100%;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 50px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+}
+
+.footer .newsletter-form input::placeholder {
+    color: #aaa;
+}
+
+.footer .newsletter-form button {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    background-color: #8BC34A;
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    padding: 10px 20px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.footer .newsletter-form button:hover {
+    background-color: #689F38;
+}
+
+.footer .copyright {
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 4rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer .copyright p {
+    margin-bottom: 0;
+}
+
+.footer .back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background-color: #8BC34A;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 999;
+}
+
+.footer .back-to-top.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.footer .back-to-top:hover {
+    background-color: #689F38;
+    transform: translateY(-5px);
+}
+
+/* Estilos para o mapa do footer */
+.footer .map-container {
+    height: 250px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+}
+
+/* Estilos para o formulário de contato lateral */
+/* Ajuste para o formulário de contato ficar em primeiro plano */
+.contact-sidebar {
+    position: fixed;
+    top: 0;
+    right: -400px;
+    width: 400px;
+    height: 100%;
+    background-color: #63783D;
+    box-shadow: -2px 0 5px rgba(0,0,0,0.3);
+    padding: 30px 20px;
+    transition: right 0.3s ease;
+    z-index: 9999; /* Aumentado para ficar acima de todos os elementos */
+    color: white;
+    font-family: 'Arial', sans-serif;
+    overflow-y: auto;
+}
+
+/* Overlay para escurecer o fundo quando o formulário estiver aberto */
+.overlay-sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9998; /* Logo abaixo do formulário, mas acima de outros elementos */
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.overlay-sidebar.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+.contact-sidebar.active {
+    right: 0;
+}
+
+.contact-sidebar h3 {
+    margin-top: 0;
+    font-weight: bold;
+    color: white;
+}
+
+.contact-sidebar .descricao {
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.contact-sidebar label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+    color: white;
+}
+
+.contact-sidebar input,
+.contact-sidebar select,
+.contact-sidebar textarea {
+    width: 100%;
+    padding: 10px 20px;
+    margin-top: 5px;
+    border: 1px solid white;
+    border-radius: 50px;
+    background-color: transparent;
+    color: white;
+}
+
+.contact-sidebar textarea {
+    resize: vertical;
+    min-height: 100px;
+    border-radius: 30px;
+}
+
+.contact-sidebar input::placeholder,
+.contact-sidebar textarea::placeholder {
+    color: #e0e0e0;
+}
+
+.contact-sidebar button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    margin-top: 20px;
+    background-color: white;
+    color: #63783D;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.contact-sidebar button[type="submit"]:hover {
+    background-color: #f0f0f0;
+}
+
+.contact-sidebar select {
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+    border-radius: 50px;
+    padding: 10px 20px;
+    font-size: 16px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.contact-sidebar select option {
+    background-color: #63783D;
+    color: white;
+}
+
+.close-button {
+    background: none;
+    border: none;
+    font-size: 30px;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    cursor: pointer;
+    color: white;
+}
+
+
+/* Responsividade */
+@media (max-width: 991.98px) {
+    .hero-section .slogan {
+        font-size: 2rem;
+    }
+    
+    .hero-section .sub-slogan {
+        font-size: 1.2rem;
+    }
+    
+    .contact-sidebar {
+        width: 320px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .hero-section {
+        height: 80vh;
+    }
+    
+    .hero-section .logo img {
+        max-height: 200px;
+    }
+    
+    .hero-section .slogan {
+        font-size: 1.8rem;
+    }
+    
+    .hero-section .sub-slogan {
+        font-size: 1.1rem;
+    }
+    
+    .stats-section .stat-card {
+        margin-bottom: 1.5rem;
+    }
+    
+    .services-section .service-card {
+        margin-bottom: 1.5rem;
+    }
+    
+    .footer {
+        padding-top: 3rem;
+    }
+    
+    .footer .col-md-4 {
+        margin-bottom: 2rem;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .hero-section .logo img {
+        max-height: 150px;
+    }
+    
+    .hero-section .slogan {
+        font-size: 1.5rem;
+    }
+    
+    .hero-section .sub-slogan {
+        font-size: 1rem;
+    }
+    
+    .hero-section .btn-saiba-mais {
+        padding: 0.6rem 1.5rem;
+        font-size: 1rem;
+    }
+    
+    .contact-sidebar {
+        width: 100%;
+        right: -100%;
+    }
+}

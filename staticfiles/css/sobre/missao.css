@@ -1,0 +1,79 @@
+.folha-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 20px;
+}
+
+/* Base para blocos */
+.folha-box,
+.folha-box_reverse {
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    max-width: 350px; /* antes era mais largo */
+    padding: 30px 25px;
+    min-height: 460px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+    color: white;
+}
+
+/* Formato folha */
+.folha-box {
+    border-radius: 0 80px 0 80px;
+}
+
+.folha-box_reverse {
+    border-radius: 0 80px 0 80px;
+}
+
+/* Título */
+.folha-box h3,
+.folha-box_reverse h3 {
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom: 90px; /* mais espaço abaixo do título */
+}
+
+/* Títulos coloridos */
+.folha-box.missao h3 {
+    color: #f4a261;
+}
+
+.folha-box_reverse.visao h3 {
+    color: #00b4d8;
+}
+
+.folha-box.valores h3 {
+    color: #88cc00;
+}
+
+/* Texto */
+.folha-box p,
+.folha-box_reverse p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: white;
+    margin-top: 0;
+}
+
+/* Gradientes ajustados - menos branco, mais cor */
+.folha-box.missao {
+    background: linear-gradient(to top, #e7914b 0%, #ffffff 75%);
+    font-weight: 700;
+}
+
+.folha-box_reverse.visao {
+    background: linear-gradient(to top, #6ecfe1 0%, #ffffff 75%);
+    font-weight: 700;
+}
+
+.folha-box.valores {
+    background: linear-gradient(to top, #98ba13 0%, #ffffff 75%);
+    font-weight: 700;
+}
