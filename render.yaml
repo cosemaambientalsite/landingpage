@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: cosemalandingpage
+    env: python
+    plan: free
+    buildCommand: "./build.sh"
+    startCommand: "gunicorn cosemalandpage.wsgi:application"
+    envVars:
+      - key: DJANGO_SETTINGS_MODULE
+        value: cosemalandpage.settings
+      - key: PYTHON_VERSION
+        value: 3.12.3
+      - key: SECRET_KEY
+        generateValue: true
+      - key: DEBUG
+        value: false
+      - key: ALLOWED_HOSTS
+        value: .onrender.com
