@@ -1,0 +1,64 @@
+/* CSS para padronizar o tamanho das imagens dos colaboradores */
+.team-card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.team-image {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 300px; /* Altura fixa para todas as imagens */
+    border-radius: 10px 10px 0 0;
+}
+
+.team-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Mantém a proporção e cobre todo o espaço */
+    object-position: center top; /* Foca na parte superior da imagem (rosto) */
+}
+
+/* Garantir que os cards tenham a mesma altura */
+.team-section .row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.team-section .col-lg-3 {
+    display: flex;
+}
+
+.team-info {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Ajustes para o efeito hover e social icons */
+.team-social {
+    position: absolute;
+    bottom: -50px;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    background-color: rgba(139, 195, 74, 0.9);
+    transition: all 0.3s ease;
+}
+
+.team-card:hover .team-social {
+    bottom: 0;
+}
+
+/* Ajustes para dispositivos móveis */
+@media (max-width: 767.98px) {
+    .team-image {
+        height: 250px;
+    }
+}

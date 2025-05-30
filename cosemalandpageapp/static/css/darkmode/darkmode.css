@@ -1,0 +1,100 @@
+/*botao principal do dark mode*/
+.darkmode-toggle-silicon {
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  z-index: 1050;
+}
+
+/*estrutura do botao principal do dark mode*/
+.btn-toggle-mode {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 12px;
+  background-color: #f8f9fa;
+  border-radius: 30px;
+  cursor: pointer;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  transition: background 0.3s ease;
+}
+
+/*botao completo do interruptor, sem isso, nao aparece como trocar de modo*/
+.switch-track {
+  width: 36px;
+  height: 20px;
+  background: #ccc;
+  border-radius: 30px;
+  position: relative;
+  transition: background 0.3s ease;
+}
+
+
+/*botao do interruptor e transparencia*/
+.switch-thumb {
+  width: 16px;
+  height: 16px;
+  background: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  transition: transform 0.3s ease;
+}
+
+/*botao do interruptor*/
+.btn-check:checked + .btn-toggle-mode .switch-thumb {
+  transform: translateX(16px);
+}
+
+/*cor do interruptor*/
+.btn-check:checked + .btn-toggle-mode .switch-track {
+  background: #4caf50;
+}
+
+/*cor da lua ou sol quando nao selecionado*/
+.btn-toggle-mode i {
+  font-size: 1.1rem;
+  color: #225bf5;
+  transition: color 0.3s ease;
+}
+
+/*cor do sol quando selecionado*/
+.btn-check:not(:checked) + .btn-toggle-mode .bi-sun {
+  color: #fbc02d;
+}
+
+/*cor da lua quando selecionado*/
+.btn-check:checked + .btn-toggle-mode .bi-moon {
+  color: #80cbc4;
+}
+
+
+/* Estilo padrão para tema claro */
+body {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+/* Estilos para tema escuro */
+html[data-bs-theme='dark'] body {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+html[data-bs-theme='dark'] h1,
+html[data-bs-theme='dark'] h2,
+html[data-bs-theme='dark'] h3,
+html[data-bs-theme='dark'] h4,
+html[data-bs-theme='dark'] h5,
+html[data-bs-theme='dark'] h6,
+html[data-bs-theme='dark'] p,
+html[data-bs-theme='dark'] a,
+html[data-bs-theme='dark'] span,
+html[data-bs-theme='dark'] div {
+    color: #ffffff !important;
+}
+
+html[data-bs-theme='dark'] a {
+    color: #add8e6 !important;
+}

@@ -1,0 +1,22 @@
+.quem-somos-titulo {
+    font-size: 2.5rem; /* Aumentado */
+    font-weight: 800;
+    color: #5c4033; /* Marrom escuro */
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.quem-somos-titulo .destaque {
+    background-color: #ccff00; /* verde limão */
+    color: #5c4033;
+    padding: 0 6px;
+    border-radius: 2px;
+}
+
+.text-center2 p {
+    font-size: 17px;
+    line-height: 1.8;
+    color: #1e1e1e;
+    margin-bottom: 15px;
+    text-align: justify;
+}

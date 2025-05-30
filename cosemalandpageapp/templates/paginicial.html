@@ -1,0 +1,161 @@
+{% load static %}
+<!doctype html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+
+    <title>Cosema Ambiental</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+    <!-- CSS principais -->
+    <link rel="stylesheet" href="{% static 'css/paginicial.css' %}">
+    <link rel="stylesheet" href="{% static 'css/csstheme/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'css/csstheme/coming-sssoon.css' %}">
+    <link rel="stylesheet" href="{% static 'css/contato/contato.css' %}">
+
+    <!-- Font Awesome 5 -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Grand+Hotel' rel='stylesheet' type='text/css'>
+    <link href="https://rsms.me/inter/inter.css" rel="stylesheet">
+
+</head>
+
+<body>
+<nav class="navbar navbar-transparent navbar-fixed-top" role="navigation">  
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+         <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown"> 
+                <img src="{% static 'images/flags/BR.png' %}"/>
+                Português(BR) 
+                <b class="caret"></b>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a href="#"><img src="{% static 'images/flags/BR.png' %}"/> Português</a></li>
+                <li class="divider"></li>
+                <li><a href="#"><img src="{% static 'images/flags/DE.png' %}"/> Deutsch <span class="label label-default">em breve</span></a></li>
+                <li><a href="#"><img src="{% static 'images/flags/GB.png' %}"/> English(UK) <span class="label label-default">em breve</span></a></li>
+                <li><a href="#"><img src="{% static 'images/flags/FR.png' %}"/> Français <span class="label label-default">em breve</span></a></li>
+                <li><a href="#"><img src="{% static 'images/flags/RO.png' %}"/> Română <span class="label label-default">em breve</span></a></li>
+                <li><a href="#"><img src="{% static 'images/flags/IT.png' %}"/> Italiano <span class="label label-default">em breve</span></a></li>                
+                <li><a href="#"><img src="{% static 'images/flags/ES.png' %}"/> Español <span class="label label-default">em breve</span></a></li>
+                <li><a href="#"><img src="{% static 'images/flags/JP.png' %}"/> 日本語 <span class="label label-default">em breve</span></a></li>
+                <li><a href="#"><img src="{% static 'images/flags/TR.png' %}"/> Türkçe <span class="label label-default">em breve</span></a></li>
+              </ul>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+            <li>
+                <a href="https://www.facebook.com/cosema" target="_blank" class="social-icon facebook-icon">
+                    <i class="fab fa-facebook-square"></i>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.instagram.com/cosema.ambiental/" target="_blank" class="social-icon instagram-icon">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </li>
+            <li>
+                <a href="#" id="openSidebar" class="social-icon contact-icon">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </li>
+       </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Conteúdo principal -->
+<div class="main bg-home position-relative">
+    <video autoplay muted loop playsinline class="bg-video">
+        <source src="{% static 'videos/videoinicialcosema.mp4' %}" type="video/mp4">
+        Seu navegador não suporta vídeo HTML5.
+    </video>
+
+    <div class="cover black" data-color="black"></div>
+
+    <div class="container text-center position-relative" style="z-index: 2;">
+        <h1 class="logo cursive">
+            <img src="{% static 'images/logo/logocosema.png' %}" alt="Cosema Ambiental" class="img-responsive center-block" style="max-height: 350px;">
+        </h1>
+        <div class="content">
+            <div class="slogan-inter">
+                <p>Conscientização. Restauração. Transformação.</p>
+                <p>Soluções ambientais para o seu negócio</p>
+            </div>
+            <a href="{% url 'sobre_cosema' %}"  class="btn-semeando mt-3">
+                <img src="{% static 'images/icones/semeando.png' %}" alt="Ícone Semeando" class="icon-left">
+                Saiba Mais
+            </a>
+
+        </div>
+    </div>
+
+    <div class="footer position-relative" style="z-index: 2;">
+        <div class="container footer">
+            Feito por <img src="{% static 'gif/green-planet.gif' %}" alt="Planeta Verde" style="height: 24px; vertical-align: middle; margin-right: 6px;">Baía Solutions.
+        </div>
+    </div>
+</div>
+
+<!-- Sidebar de contato -->
+<div id="contactSidebar" class="contact-sidebar" style="z-index: 9999;">
+    <button id="closeSidebar" class="close-button">&times;</button>
+    <h3>Solicite sua proposta</h3>
+    <p class="descricao">Nossos especialistas estão prontos para fornecer as melhores soluções ambientais para seu negócio.</p>
+    <form>
+        <label for="nome">Nome</label>
+        <input type="text" id="nome" name="nome" required>
+
+        <label for="empresa">Empresa</label>
+        <input type="text" id="empresa" name="empresa" required>
+
+        <label for="cargo">Cargo</label>
+        <select id="cargo" name="cargo" required>
+            <option value="" disabled selected>Selecione</option>
+            <option value="Presidente">Presidente</option>
+            <option value="Gestor">Gestor</option>
+            <option value="Analista">Analista</option>
+            <option value="Outro">Outro</option>
+        </select>
+
+        <label for="email">E-mail</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="telefone">Telefone</label>
+        <input type="text" id="telefone" name="telefone" required>
+
+        <label for="servico">Produtos e Serviços Cosema</label>
+        <select id="servico" name="servico" required>
+            <option value="" disabled selected>Selecione</option>
+            <option value="Planejamento Ambiental">Planejamento Ambiental</option>
+            <option value="Monitoramento e Avaliação da Qualidade do Ar">Monitoramento e Avaliação da Qualidade do Ar</option>
+            <option value="Manejo e Revitalização do Ambiente">Manejo e Revitalização do Ambiente</option>
+            <option value="Outro">Outro</option>
+        </select>
+
+        <label for="mensagem">Mensagem</label>
+        <textarea id="mensagem" name="mensagem" required></textarea>
+
+        <button type="submit">Enviar</button>
+    </form>
+</div>
+
+<!-- Scripts -->
+<script src="{% static 'js/jquery-1.10.2.js' %}"></script>
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+<script src="{% static 'js/contato.js' %}"></script>
+</body>
+</html>
